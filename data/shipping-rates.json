@@ -1,0 +1,10 @@
+{
+  "DE": [
+    { "from_subtotal": 0, "to_subtotal": 4999, "from_weight": 0, "to_weight": 5, "price": 5.9, "label": "DHL Standard" },
+    { "from_subtotal": 5000, "to_subtotal": 999999, "from_weight": 0, "to_weight": 30, "price": 0, "label": "Kostenfrei ab 50 €" }
+  ],
+  "AT": [
+    { "from_subtotal": 0, "to_subtotal": 6999, "from_weight": 0, "to_weight": 5, "price": 7.9, "label": "DPD Classic" },
+    { "from_subtotal": 7000, "to_subtotal": 999999, "from_weight": 0, "to_weight": 30, "price": 0, "label": "Kostenfrei ab 70 €" }
+  ]
+}
