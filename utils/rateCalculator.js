@@ -1,6 +1,6 @@
-const rates = require("../data/shipping-rates.json");
+import rates from "../data/shipping-rates.json" assert { type: "json" };
 
-function getShippingRate(country, subtotal, weight) {
+export function getShippingRate(country, subtotal, weight) {
   const countryRates = rates[country] || rates["DE"];
   for (let rule of countryRates) {
     if (
@@ -21,5 +21,3 @@ function getShippingRate(country, subtotal, weight) {
   }
   return null;
 }
-
-module.exports = getShippingRate;

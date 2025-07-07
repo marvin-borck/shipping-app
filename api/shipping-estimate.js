@@ -1,9 +1,14 @@
-const getShippingRate = require("../utils/rateCalculator");
+import { getShippingRate } from "../utils/rateCalculator.js";
 
-export default function handler(req, res) {
+export default async function handler(req, res) {
   const { country = "DE", subtotal = 0, weight = 0 } = req.query;
 
-  const rate = getShippingRate(country, parseInt(subtotal), parseFloat(weight));
+  const rate = getShippingRate(
+    country,
+    parseInt(subtotal),
+    parseFloat(weight)
+  );
+
   if (!rate) {
     return res.status(404).json({ error: "Keine Versandkosten gefunden" });
   }
